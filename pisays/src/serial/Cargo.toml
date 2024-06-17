@@ -5,3 +5,6 @@ authors = ["Alexandra Iordache <iordachhe@proton.me>"]
 license = "GPL-3.0"
 
 [dependencies]
+errno = "0.3.9"
+libc = "0.2.155"
+termios = "0.3"

@@ -10,3 +10,5 @@ license = "GPL-3.0"
 
 [dependencies]
 inquire = "0.7.5"
+
+serial = {path = "src/serial"}

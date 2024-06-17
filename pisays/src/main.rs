@@ -1,7 +1,7 @@
 use std::{fmt::Display, str::FromStr};
 
 use inquire::Select;
-
+use serial::Serial;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 enum Peripheral {
@@ -33,7 +33,8 @@ impl Display for Peripheral {
 }
 
 fn run_serial() {
-    todo!("wait for it")
+    let ser = Serial::new().expect("Failed to initialize serial port");
+    ser.write("Hello, world!\n").expect("Failed to write");
 }
 
 fn main() {
@@ -45,8 +46,7 @@ fn main() {
             match per {
                 Peripheral::Serial => run_serial(),
             }
-        },
-        Err(e) => panic!("Unrecognized peripheral: {}", e)
+        }
+        Err(e) => panic!("Unrecognized peripheral: {}", e),
     }
-
 }
