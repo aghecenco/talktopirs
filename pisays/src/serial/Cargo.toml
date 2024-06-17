@@ -1,0 +1,7 @@
+[package]
+name = "serial"
+version = "0.1.0"
+authors = ["Alexandra Iordache <iordachhe@proton.me>"]
+license = "GPL-3.0"
+
+[dependencies]
